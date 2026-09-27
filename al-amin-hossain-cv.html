@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101d36">
+  <meta name="description" content="Al-Amin Hossain — IT Professional with experience in Microsoft 365 support, networking, and IT operations.">
+  <title>Al-Amin Hossain | IT Professional</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #17243b;
+      --muted: #64748b;
+      --navy: #101d36;
+      --blue: #4f8cff;
+      --pale: #edf4ff;
+      --line: #e3eaf3;
+      --paper: #fff;
+      --canvas: #e8eef6;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--canvas);
+      color: var(--ink);
+      font: 15px/1.6 "Segoe UI", Inter, ui-sans-serif, system-ui, -apple-system, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    a:hover { color: var(--blue); }
+    .toolbar { max-width: 1080px; margin: 24px auto 14px; display: flex; justify-content: flex-end; padding: 0 20px; }
+    .print-button { border: 0; border-radius: 999px; background: var(--navy); color: #fff; padding: 11px 18px; font: inherit; font-size: 13px; font-weight: 700; cursor: pointer; box-shadow: 0 5px 15px #101d3625; }
+    .print-button:hover { background: #23385e; }
+    .resume { max-width: 1040px; margin: 0 auto 40px; background: var(--paper); box-shadow: 0 18px 60px #1627461a; overflow: hidden; }
+    .hero { position: relative; isolation: isolate; padding: 48px 58px 43px; color: #fff; background: radial-gradient(ellipse at 92% 8%, #315b9c 0, transparent 34%), linear-gradient(120deg, #101d36 0%, #142a4b 72%, #193961 100%); }
+    .hero::after { content: ""; z-index: -1; position: absolute; right: -75px; bottom: -150px; width: 340px; height: 340px; border: 1px solid #ffffff18; border-radius: 50%; box-shadow: 0 0 0 32px #ffffff08, 0 0 0 68px #ffffff06; }
+    .eyebrow { display: flex; align-items: center; gap: 10px; color: #b8d3ff; font-size: 11px; font-weight: 800; letter-spacing: .2em; text-transform: uppercase; }
+    .eyebrow::before { content: ""; width: 24px; height: 2px; background: var(--blue); }
+    h1 { margin: 15px 0 2px; font-size: clamp(38px, 6vw, 58px); line-height: 1.05; letter-spacing: -.045em; }
+    .role { margin: 9px 0 17px; color: #b8d3ff; font-size: 18px; font-weight: 600; }
+    .intro { max-width: 760px; margin: 0; color: #d5dfef; font-size: 14px; line-height: 1.75; }
+    .contact-strip { display: flex; flex-wrap: wrap; gap: 10px 23px; margin-top: 26px; color: #eef4ff; font-size: 12px; }
+    .contact-strip span { display: inline-flex; align-items: center; gap: 8px; }
+    .contact-strip b { color: #8bb6ff; font-size: 13px; }
+    .layout { display: grid; grid-template-columns: 310px minmax(0, 1fr); }
+    aside { padding: 36px 30px 44px 38px; background: #f5f8fc; border-right: 1px solid var(--line); }
+    main { min-width: 0; padding: 36px 50px 48px; }
+    section + section { margin-top: 32px; }
+    .section-title { display: flex; align-items: center; gap: 11px; margin: 0 0 17px; font-size: 12px; font-weight: 850; letter-spacing: .15em; text-transform: uppercase; color: #263a5c; }
+    .section-title::before { content: ""; width: 22px; height: 2px; flex: 0 0 auto; background: var(--blue); }
+    .section-title::after { content: ""; height: 1px; flex: 1; background: var(--line); }
+    aside .section-title { font-size: 11px; }
+    .contact-list { display: grid; gap: 14px; }
+    .contact-item { min-width: 0; }
+    .contact-label { display: block; margin-bottom: 2px; color: #8a99ad; font-size: 9px; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
+    .contact-value { overflow-wrap: anywhere; color: #334662; font-size: 12px; }
+    .skill-list { display: flex; flex-wrap: wrap; gap: 7px; }
+    .chip { padding: 6px 9px; border: 1px solid #dce7f6; border-radius: 6px; background: #fff; color: #344a6b; font-size: 10px; font-weight: 650; line-height: 1.25; }
+    .training-list, .plain-list { margin: 0; padding: 0; list-style: none; }
+    .training-list li { position: relative; padding: 0 0 10px 15px; color: #42536c; font-size: 11px; line-height: 1.45; }
+    .training-list li::before { content: ""; position: absolute; top: 6px; left: 0; width: 6px; height: 6px; border-radius: 50%; background: #74a5f8; }
+    .language { display: flex; justify-content: space-between; gap: 12px; padding: 9px 0; border-bottom: 1px solid var(--line); font-size: 11px; }
+    .language:last-child { border-bottom: 0; }
+    .language span:last-child { color: var(--muted); text-align: right; }
+    .education-degree { margin: 0 0 5px; color: #263a5c; font-size: 12px; font-weight: 750; line-height: 1.45; }
+    .education-school { color: var(--muted); font-size: 11px; }
+    .job { position: relative; padding: 0 0 27px 21px; border-left: 1px solid #dce5f1; }
+    .job:last-child { padding-bottom: 0; border-left-color: transparent; }
+    .job::before { content: ""; position: absolute; top: 4px; left: -5px; width: 9px; height: 9px; border-radius: 50%; background: var(--blue); box-shadow: 0 0 0 4px #edf4ff; }
+    .job-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; }
+    .job h3 { margin: 0; color: #1d2e49; font-size: 16px; line-height: 1.35; }
+    .company { margin-top: 4px; color: #59708f; font-size: 12px; font-weight: 650; }
+    .date { flex: 0 0 auto; padding: 5px 9px; border-radius: 5px; background: var(--pale); color: #3c6db4; font-size: 10px; font-weight: 800; white-space: nowrap; }
+    .job ul { margin: 14px 0 0; padding-left: 17px; color: #53637a; font-size: 11.5px; }
+    .job li { padding: 0 0 6px 2px; }
+    .job li::marker { color: #78a5ee; }
+    .achievement { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .award { padding: 14px 15px; border: 1px solid var(--line); border-radius: 8px; background: linear-gradient(135deg, #fff, #f8fbff); }
+    .award-year { color: #477cc9; font-size: 10px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+    .award p { margin: 5px 0 0; color: #43536a; font-size: 11px; line-height: 1.5; }
+    .footer { padding: 13px 20px; border-top: 1px solid var(--line); color: #8a98aa; text-align: center; font-size: 9px; letter-spacing: .08em; text-transform: uppercase; }
+    @media (max-width: 720px) {
+      .toolbar { margin-top: 14px; }
+      .resume { margin: 0 10px 24px; }
+      .hero { padding: 35px 27px 31px; }
+      .layout { grid-template-columns: 1fr; }
+      aside { display: grid; grid-template-columns: 1fr 1fr; gap: 28px 22px; padding: 29px 27px; border-right: 0; border-bottom: 1px solid var(--line); }
+      aside section + section { margin-top: 0; }
+      main { padding: 30px 27px 36px; }
+      .job-heading { flex-direction: column; gap: 8px; }
+      .date { order: -1; }
+    }
+    @media (max-width: 430px) { aside { grid-template-columns: 1fr; } .achievement { grid-template-columns: 1fr; } .contact-strip { display: grid; } }
+    @page { size: A4; margin: 11mm; }
+    @media print {
+      body { background: #fff; font-size: 10pt; }
+      .toolbar { display: none; }
+      .resume { max-width: none; margin: 0; box-shadow: none; overflow: visible; }
+      .hero { print-color-adjust: exact; -webkit-print-color-adjust: exact; padding: 30px 38px 28px; }
+      .layout { grid-template-columns: 29% 71%; }
+      aside { padding: 25px 22px; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+      main { padding: 25px 32px; }
+      .chip, .date, .award, .job::before { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+      section, .job, .award { break-inside: avoid; }
+      a { text-decoration: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="toolbar"><button class="print-button" type="button" onclick="window.print()">Print / Save as PDF</button></div>
+  <article class="resume">
+    <header class="hero">
+      <div class="eyebrow">Curriculum Vitae</div>
+      <h1>Al-Amin Hossain</h1>
+      <p class="role">IT Professional</p>
+      <p class="intro">Certified Computer Engineer with 4+ years of experience in technical support, Microsoft 365 administration, networking, and business-critical IT operations. Skilled in hardware and software troubleshooting, cloud services, data center operations, bandwidth management, IP telephony, and customer support. Known for careful diagnostics and dependable service in fast-paced environments.</p>
+      <div class="contact-strip">
+        <span><b>☎</b> +8615692196637</span>
+        <span><b>✉</b> <a href="mailto:Alamin107hossain@gmail.com">Alamin107hossain@gmail.com</a></span>
+        <span><b>⌖</b> Minhang, Shanghai</span>
+      </div>
+    </header>
+    <div class="layout">
+      <aside>
+        <section>
+          <h2 class="section-title">Contact &amp; details</h2>
+          <div class="contact-list">
+            <div class="contact-item"><span class="contact-label">Phone</span><a class="contact-value" href="tel:+8615692196637">+86 156 9219 6637</a></div>
+            <div class="contact-item"><span class="contact-label">Phone · Bangladesh</span><a class="contact-value" href="tel:+8801670333107">+880 1670 333107</a></div>
+            <div class="contact-item"><span class="contact-label">Email</span><a class="contact-value" href="mailto:alamin107hossain@gmail.com">alamin107hossain@gmail.com</a></div>
+            <div class="contact-item"><span class="contact-label">Email · Bangladesh</span><a class="contact-value" href="mailto:alamin107hossain@outlook.com">alamin107hossain@outlook.com</a></div>
+            <div class="contact-item"><span class="contact-label">Location</span><span class="contact-value">Dhaka, Bangladesh · Minhang, Shanghai</span></div>
+            <div class="contact-item"><span class="contact-label">LinkedIn</span><a class="contact-value" href="https://www.linkedin.com/in/alamin-hossain" target="_blank" rel="noreferrer">linkedin.com/in/alamin-hossain</a></div>
+          </div>
+        </section>
+        <section>
+          <h2 class="section-title">Core skills</h2>
+          <div class="skill-list">
+            <span class="chip">Microsoft 365</span><span class="chip">Microsoft Entra ID</span><span class="chip">Hardware &amp; software</span><span class="chip">Cisco / MikroTik</span><span class="chip">DNS &amp; DHCP</span><span class="chip">File servers</span><span class="chip">Network topology</span><span class="chip">LAN setup</span><span class="chip">Enterprise Wi-Fi</span><span class="chip">Network security</span><span class="chip">C / C+</span><span class="chip">HTML / CSS</span>
+          </div>
+        </section>
+        <section>
+          <h2 class="section-title">Education</h2>
+          <p class="education-degree">BSc Engineering in Computer Science &amp; Engineering</p>
+          <div class="education-school">National University</div>
+        </section>
+        <section>
+          <h2 class="section-title">Training</h2>
+          <ul class="training-list">
+            <li>Cisco Certified Network Associate (CCNA) · Local</li>
+            <li>Certified Data Center Professional (CDCP) · Optimal Technology</li>
+            <li>MTCNA · Azure Administrator (104) · MTA</li>
+            <li>IT Architecture · Wireless Networking · LAN</li>
+            <li>CompTIA · Microsoft Azure Fundamentals</li>
+            <li>Windows 10/11 Administration · Intune</li>
+            <li>Honeywell / Zebra handheld device management</li>
+            <li>Network printer and UPS setup and management</li>
+          </ul>
+        </section>
+        <section>
+          <h2 class="section-title">Languages</h2>
+          <div class="language"><strong>Bangla</strong><span>Native</span></div>
+          <div class="language"><strong>English</strong><span>Fluent · reading, writing &amp; speaking</span></div>
+        </section>
+      </aside>
+      <main>
+        <section>
+          <h2 class="section-title">Professional experience</h2>
+          <article class="job">
+            <div class="job-heading"><div><h3>Technical Support Engineer, Microsoft 365</h3><div class="company">Shanghai Wicresoft Ltd. · China</div></div><div class="date">Aug 2023 – Jul 2025</div></div>
+            <ul>
+              <li>Worked with the Microsoft Shanghai Support Team, serving premier customers across the APGC region through Shanghai Wicresoft.</li>
+              <li>Supported SharePoint Online, Microsoft Entra ID (Azure AD), OneDrive, Exchange Online, Teams, Stream, PowerApps, OneNote, Microsoft Forms, and related services.</li>
+              <li>Resolved Microsoft 365 incidents and service requests using established diagnostic methods and support processes.</li>
+              <li>Managed relationships with customers, business partners, and stakeholders; documented incidents, reports, suggestions, and technical issues.</li>
+              <li>Met service-level targets and supported break-fix requests with root cause analysis.</li>
+            </ul>
+          </article>
+          <article class="job">
+            <div class="job-heading"><div><h3>Senior Executive, I&amp;I Department</h3><div class="company">Aamra Network Ltd. · Bangladesh</div></div><div class="date">Mar 2021 – Aug 2023</div></div>
+            <ul>
+              <li>Installed, configured, and troubleshot hardware and software; maintained Windows systems, Outlook clients, network devices, printers, UPS systems, and intranet services.</li>
+              <li>Configured routers, switches, access points, and Wi-Fi; monitored WAN bandwidth and escalated provider faults through resolution.</li>
+              <li>Set up Polycom IP telephony and IP cameras; monitored data center operations and disaster recovery systems.</li>
+              <li>Provided technical support for the Japan Tobacco International project and designed ICT infrastructure solutions.</li>
+              <li>Helped implement IT policies and project guidelines; managed vendors and IT inventory.</li>
+              <li>Led and trained project support teams, delivered end-user training, and maintained as-built diagrams, UAT documentation, SOPs, and user manuals.</li>
+            </ul>
+          </article>
+        </section>
+        <section>
+          <h2 class="section-title">Achievements</h2>
+          <div class="achievement">
+            <div class="award"><div class="award-year">March 2025</div><p><strong>Employee of the Month</strong><br>Shanghai Wicresoft</p></div>
+            <div class="award"><div class="award-year">August 2022</div><p><strong>Best Performer</strong><br>IT Support Project Team · Aamra Network Ltd.</p></div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <footer class="footer">Al-Amin Hossain · IT Professional</footer>
+  </article>
+</body>
+</html>
