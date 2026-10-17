@@ -78,6 +78,11 @@
     .job li { padding: 0 0 6px 2px; }
     .job li::marker { color: #78a5ee; }
     .achievement { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .project-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 11px; }
+    .project-card { position: relative; min-height: 82px; padding: 15px 15px 13px 19px; border: 1px solid var(--line); border-radius: 8px; background: linear-gradient(135deg, #fff, #f8fbff); }
+    .project-card::before { content: ""; position: absolute; top: 15px; bottom: 15px; left: 0; width: 3px; border-radius: 0 3px 3px 0; background: var(--blue); }
+    .project-card h3 { margin: 0; color: #263a5c; font-size: 13px; line-height: 1.4; }
+    .project-type { display: inline-block; margin-top: 7px; color: #6d7e96; font-size: 9px; font-weight: 750; letter-spacing: .1em; text-transform: uppercase; }
     .award { padding: 14px 15px; border: 1px solid var(--line); border-radius: 8px; background: linear-gradient(135deg, #fff, #f8fbff); }
     .award-year { color: #477cc9; font-size: 10px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
     .award p { margin: 5px 0 0; color: #43536a; font-size: 11px; line-height: 1.5; }
@@ -93,7 +98,7 @@
       .job-heading { flex-direction: column; gap: 8px; }
       .date { order: -1; }
     }
-    @media (max-width: 430px) { aside { grid-template-columns: 1fr; } .achievement { grid-template-columns: 1fr; } .contact-strip { display: grid; } }
+    @media (max-width: 430px) { aside { grid-template-columns: 1fr; } .achievement, .project-grid { grid-template-columns: 1fr; } .contact-strip { display: grid; } }
     @page { size: A4; margin: 11mm; }
     @media print {
       body { background: #fff; font-size: 10pt; }
@@ -190,6 +195,15 @@
               <li>Led and trained project support teams, delivered end-user training, and maintained as-built diagrams, UAT documentation, SOPs, and user manuals.</li>
             </ul>
           </article>
+        </section>
+        <section>
+          <h2 class="section-title">Projects</h2>
+          <div class="project-grid">
+            <article class="project-card"><h3>DevOps Project</h3><span class="project-type">DevOps</span></article>
+            <article class="project-card"><h3>SP Migration from SPO</h3><span class="project-type">SharePoint Online</span></article>
+            <article class="project-card"><h3>Automation Project</h3><span class="project-type">Automation</span></article>
+            <article class="project-card"><h3>AI Project</h3><span class="project-type">Artificial Intelligence</span></article>
+          </div>
         </section>
         <section>
           <h2 class="section-title">Achievements</h2>
