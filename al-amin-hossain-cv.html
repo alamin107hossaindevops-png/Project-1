@@ -31,6 +31,9 @@
     .toolbar { max-width: 1080px; margin: 24px auto 14px; display: flex; justify-content: flex-end; padding: 0 20px; }
     .print-button { border: 0; border-radius: 999px; background: var(--navy); color: #fff; padding: 11px 18px; font: inherit; font-size: 13px; font-weight: 700; cursor: pointer; box-shadow: 0 5px 15px #101d3625; }
     .print-button:hover { background: #23385e; }
+    .toolbar-links { display: flex; align-items: center; gap: 10px; }
+    .document-link { display: inline-flex; align-items: center; border: 1px solid #cbd7e7; border-radius: 999px; background: #fff; color: #334662; padding: 10px 16px; font-size: 12px; font-weight: 750; }
+    .document-link:hover { border-color: var(--blue); color: #326dc5; }
     .resume { max-width: 1040px; margin: 0 auto 40px; background: var(--paper); box-shadow: 0 18px 60px #1627461a; overflow: hidden; }
     .hero { position: relative; isolation: isolate; padding: 48px 58px 43px; color: #fff; background: radial-gradient(ellipse at 92% 8%, #315b9c 0, transparent 34%), linear-gradient(120deg, #101d36 0%, #142a4b 72%, #193961 100%); }
     .hero::after { content: ""; z-index: -1; position: absolute; right: -75px; bottom: -150px; width: 340px; height: 340px; border: 1px solid #ffffff18; border-radius: 50%; box-shadow: 0 0 0 32px #ffffff08, 0 0 0 68px #ffffff06; }
@@ -107,7 +110,7 @@
   </style>
 </head>
 <body>
-  <div class="toolbar"><button class="print-button" type="button" onclick="window.print()">Print / Save as PDF</button></div>
+  <div class="toolbar"><nav class="toolbar-links" aria-label="Application documents"><a class="document-link" href="al-amin-hossain-cover-letter.html">Cover Letter</a><button class="print-button" type="button" onclick="window.print()">Print / Save as PDF</button></nav></div>
   <article class="resume">
     <header class="hero">
       <div class="eyebrow">Curriculum Vitae</div>
